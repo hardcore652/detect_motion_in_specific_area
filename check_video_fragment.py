@@ -1,12 +1,12 @@
 import cv2,time,pygame,numpy
 
-interval = int(input("Введите интервал проверки в кадрах "))
-threeshold = int(input("Введите порог разницы в цвете "))
-threeshold_2 = float(input("Введите порог количества несовпадающих пикселей (в процентах от 0 до 1) "))
-save_path = input("Введите путь к папке для сохранённых кадров (без / на конце) ")
-path = input("(Пример: camera/Vorota.avi ) Введите путь ")
-start_video = int(input("Введите время начала проверки "))
-video_length = float(input("Введите длительность части видео в секундах "))
+interval = int(input("Enter the gap between reading a new frame "))
+threeshold = int(input("Enter color difference of pixel treeshold "))
+threeshold_2 = float(input("Enter count of changed pixels treeshold "))
+save_path = input("Enter path to the result folder without / at the end ")
+path = input("Enter path to the video ")
+start_video = int(input("Enter second to start from "))
+video_length = float(input("Enter how many seconds from the specified point you want to check "))
 
 vidcap = cv2.VideoCapture(path)
 (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.')
